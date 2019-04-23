@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/green"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextAppearance="@style/RobotoBoldTextAppearance">
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <com.btradesm.storemanager.Fonts.LatoBLack
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/space_12"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/assign_ord_de"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/text_size_large"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/make_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/space_12"
+                    android:layout_marginRight="@dimen/space_12"
+                    app:srcCompat="@drawable/ic_phone_black_24dp" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/space_8"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_10"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginRight="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_10"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.btradesm.storemanager.Fonts.LatoBLack
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_4"
+                        android:text=""
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/text_size_X_small" />
+
+                    <com.btradesm.storemanager.Fonts.LatoBLack
+                        android:id="@+id/status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/space_12"
+                        android:layout_marginTop="@dimen/space_4"
+                        android:gravity="right"
+                        android:text="@string/st"
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/text_size_X_small" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:background="#fff"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/space_4"
+                        tools:ignore="Suspicious0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.btradesm.storemanager.Fonts.LatoBLack
+                                android:id="@+id/tvName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/order_id"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/text_size_X_small" />
+
+                            <com.btradesm.storemanager.Fonts.LatoBLack
+                                android:id="@+id/order_id"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/space_4"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textColor="#000"
+                                android:textSize="@dimen/text_size_small"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_4"
+                            android:orientation="horizontal">
+
+                            <com.btradesm.storemanager.Fonts.LatoBLack
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/cust_name"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/text_size_X_small" />
+
+                            <com.btradesm.storemanager.Fonts.LatoBLack
+                                android:id="@+id/customer_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/space_4"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000"
+                                android:textSize="@dimen/text_size_X_small" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_4"
+                            android:orientation="horizontal">
+
+                            <com.btradesm.storemanager.Fonts.LatoBLack
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/tv_deli_socity"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/text_size_X_small" />
+
+                            <com.btradesm.storemanager.Fonts.LatoBLack
+                                android:id="@+id/order_socity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/space_4"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000"
+                                android:textSize="@dimen/text_size_X_small" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        android:orientation="vertical"
+                        tools:ignore="Suspicious0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="horizontal">
+
+                            <com.btradesm.storemanager.Fonts.LatoBLack
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/cust_ph"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/text_size_X_small" />
+
+                            <com.btradesm.storemanager.Fonts.LatoBLack
+                                android:id="@+id/customer_phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/space_4"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000"
+                                android:textSize="@dimen/text_size_X_small" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_4"
+                            android:orientation="horizontal">
+
+                            <com.btradesm.storemanager.Fonts.LatoBLack
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/date_d"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/text_size_X_small" />
+
+                            <com.btradesm.storemanager.Fonts.LatoBLack
+                                android:id="@+id/order_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/space_4"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000"
+                                android:textSize="@dimen/text_size_X_small" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_4"
+                            android:orientation="horizontal">
+
+                            <com.btradesm.storemanager.Fonts.LatoBLack
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/time_t"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/text_size_X_small" />
+
+                            <com.btradesm.storemanager.Fonts.LatoBLack
+                                android:id="@+id/order_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/space_4"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="#000"
+                                android:textSize="@dimen/text_size_X_small" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/space_10"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginRight="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.btradesm.storemanager.Fonts.LatoBLack
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/ord_am"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <com.btradesm.storemanager.Fonts.LatoBLack
+                    android:id="@+id/ammount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_4"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="@dimen/text_size_X_small" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/space_8"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/product_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,209 @@
+<resources>
+    <string name="app_name" translatable="false">B-TRADE ПОСТАВЩИК</string>
+    <string name="currency" translatable="false">сом</string>
+    <string name="title_activity_main" translatable="false">MainActivity</string>
+    <string name="edit_profilee" translatable="false">Изменить профиль"</string>
+    <string name="txtCredits" translatable="false"><a href="http://www.google.com">Google</a></string>
+<string name="tit" translatable="false">Заголовок</string>
+    <string name="action_settings" translatable="false">Настройки</string>
+    <string name="action_search" translatable="false">Поиск</string>
+    <string name="search_hint" translatable="false">Писать сюда…</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+<string name="prd_id" translatable="false">Номер товара</string>
+
+    <string name="nav_terms" translatable="false">Соглашения &amp; условия</string>
+<string name="user_id" translatable="false">Номер пользователя</string>
+    <!-- string.xml -->
+    <string name="nav_dashboard" translatable="false">Панель управления</string>
+    <string name="nav_app_user" translatable="false">Пользователи</string>
+    <string name="nav_Products" translatable="false">Товары</string>
+    <string name="nav_stock_update" translatable="false">Склад</string>
+    <string name="nav_order" translatable="false">Заказы</string>
+    <string name="nav_stock" translatable="false">Склад</string>
+    <string name="all_product" translatable="false">Все товары</string>
+    <string name="nav_edit_profile" translatable="false">Изменить профиль</string>
+    <string name="forget" translatable="false">Забыли пароль</string>
+    <string name="in_st" translatable="false">В наличии</string>
+    <string name="out_st" translatable="false">Нет в наличии</string>
+    <string name="pr_id" translatable="false">Номер товара</string>
+    <string name="nav_logout" translatable="false">Выйти</string>
+<string name="pur_pr" translatable="false">Покупка товара</string>
+    <string name="order_detail" translatable="false">Детали заказа</string>
+    <!-- activity_login.xml -->
+    <string name="order" translatable="false">Заказы</string>
+    <string name="et_login_phone_hint" translatable="false">Номер мобильного телефона (обязательно)</string>
+    <string name="tv_login_email" translatable="false">Email (обязательно)</string>
+    <string name="tv_login_password" translatable="false">Пароль (обязательно)</string>
+    <string name="btn_login" translatable="false">Логин</string>
+    <string name="btn_send" translatable="false">Отправить</string>
+    <string name="tv_login_note" translatable="false">Before continue with application you must verify your mobile number. Our system will sent you OTP code on registered mobile number</string>
+<string name="btn_signin" translatable="false">ВОЙТИ</string>
+    <string name="assign_ord_de" translatable="false">Выбрать доставку</string>
+    <!-- activity_register.xml -->
+    <string name="tv_reg" translatable="false">Регистрация</string>
+    <string name="nm" translatable="false">Имя</string>
+    <string name="ph" translatable="false">Телефон</string>
+    <string name="em" translatable="false">Email</string>
+    <string name="tv_reg_name_hint" translatable="false">Имя (обязательно)</string>
+    <string name="tv_reg_pincode" translatable="false">ИНДЕКС (обязательно)</string>
+    <string name="tv_reg_socity" translatable="false">Район/квартира(обязательно)</string>
+    <string name="btn_reg_socity_choose" translatable="false">Выбрать район...</string>
+    <string name="tv_reg_house" translatable="false">Hомер дома(обязательно)</string>
+    <string name="btn_reg_update" translatable="false">Оновить профиль</string>
+    <string name="et_reg_search" translatable="false">Посик района...</string>
+    <string name="tv_reg_note" translatable="false">Примечание: услуга доступна только для Администратора</string>
+    <string name="tv_reg_address" translatable="false">Адрес(обязательно)</string>
+    <string name="et_reg_address" translatable="false">Полный адрес</string>
+
+    <!-- fragment_cart.xml -->
+    <string name="tv_cart_title" translatable="false">Корзина</string>
+    <string name="tv_cart_clear" translatable="false">Очистить весь продукт</string>
+    <string name="tv_cart_checkout" translatable="false">Продолжить оформление заказа</string>
+    <string name="tv_cart_total" translatable="false">Итого:\u0020</string>
+    <string name="tv_cart_item" translatable="false">Товаров:\u0020</string>
+    <string name="tv_cart_rs" translatable="false">\u0020 сом</string>
+
+    <!-- fragment_delivery_time.xml -->
+    <string name="tv_del_title" translatable="false">Дата/Время доставки</string>
+    <string name="tv_del_address" translatable="false">Адресс доставки</string>
+    <string name="et_del_address_hint" translatable="false">Введите адрес доставки..</string>
+    <string name="tv_del_continue" translatable="false">Продолжайте оформление</string>
+    <string name="tv_del_date" translatable="false">Выберите дату доставки</string>
+    <string name="tv_del_time" translatable="false">Выберите время доставки</string>
+    <string name="tv_del_date_time" translatable="false">Дата/Время доставки</string>
+    <string name="tv_total_item_amount" translatable="false">Всего товаров и количество</string>
+    <string name="tv_total_total" translatable="false">ИТОГО </string>
+
+    <!-- fragment_home.xml -->
+    <string name="tv_home_cat" translatable="false">Товары</string>
+    <string name="tv_home_view" translatable="false">Посмотреть все ></string>
+
+    <!-- fragment_Wallet.xml -->
+    <string name="tv_app_name" translatable="false">Консигнация</string>
+    <string name="st" translatable="false">Статус</string>
+    <!-- fragment_Reward.xml -->
+    <string name="tv_toolbar_name" translatable="false">/</string>
+    <!-- row_product_rv.xml -->
+    <string name="tv_pro_add" translatable="false">Добавить</string>
+    <string name="tv_pro_update" translatable="false">Обновить</string>
+    <string name="tv_pro_price" translatable="false">Цена за\u0020</string>
+    <string name="inc" translatable="false">Прирост</string>
+    <string name="cat" translatable="false">Номер категории</string>
+    <string name="un_v" translatable="false">Стоимость единицы</string>
+    <string name="pr" translatable="false">Цена</string>
+    <string name="tv_pro_rs" translatable="false">\u0020 сом \u0020</string>
+    <string name="tv_pro_total" translatable="false">Итого: </string>
+
+    <!-- fragment_confirm_order.xml -->
+    <string name="tv_conf_order_title" translatable="false">Детали платежа</string>
+
+    <!-- fragment_my_order_detail.xml -->
+    <string name="tv_order_cancle" translatable="false">Отменить заказ</string>
+    <string name="tv_order_summery" translatable="false">Суммарно</string>
+    <string name="tv_order_total" translatable="false">Итого: сом</string>
+    <string name="tv_order_qty" translatable="false">Кол-во</string>
+    <string name="tv_order_rs" translatable="false">сом</string>
+<string name="unit" translatable="false">Едю</string>
+    <string name="add_pur" translatable="false">Добавить покупку</string>
+    <!-- fragment_order_thanks.xml -->
+    <string name="tv_thanks_title" translatable="false">Спасибо за ваш заказ.</string>
+    <string name="tv_thanks_home" translatable="false">Вернуться на главную</string>
+    <string name="tv_thanks_order" translatable="false">Отслеживать свой заказ</string>
+
+    <!-- Forgot password -->
+    <string name="forgot" translatable="false">Забыли пароль ?</string>
+
+    <!-- Code message and concat  string -->
+    <string name="my_order" translatable="false">Мои заказы</string>
+    <string name="edit_profile" translatable="false">Изменить профиль</string>
+    <string name="delivery" translatable="false">Доставка</string>
+    <string name="assign_to" translatable="false">Назначить на :</string>
+    <string name="active">Актив</string>
+    <string name="app_user" translatable="false">Клиенты</string>
+    <string name="delivery_date" translatable="false">"Дата доставки: </string>
+    <string name="please_select_date" translatable="false">Пожалуйста, выберите дату</string>
+    <string name="no_rcord_found" translatable="false">Запись не найдена</string>
+    <string name="connection_time_out" translatable="false">Время соединения вышло</string>
+    <string name="add_delivery_address" translatable="false">Добавить адрес доставки</string>
+    <string name="order_now" translatable="false">Купить</string>
+    <string name="payment_detail" translatable="false">Детали оплаты</string>
+    <string name="delivery_time" translatable="false">Срок поставки</string>
+    <string name="please_enter_pincode" translatable="false">Пожалуйста, введите ИНДЕКС</string>
+    <string name="receiver_mobile_number" translatable="false">Телефон получателя(обязательно)</string>
+    <string name="receiver_name_req" translatable="false">Receiver Name(Required)</string>
+    <string name="phone_too_short" translatable="false">Телефон слишком короткий</string>
+    <string name="please_add_address" translatable="false">Пожалуйста, добавьте адрес</string>
+    <string name="please_select_address" translatable="false">Пожалуйста, выберите адрес</string>
+    <string name="please_select_date_time" translatable="false">Пожалуйста, выберите дату и время</string>
+    <string name="profile_updated" translatable="false">Профиль обновлен</string>
+    <string name="uploading_profile_data" translatable="false">Загрузка данных профиля</string>
+    <string name="cancle_order_note" translatable="false">Вы уверены!\nчто хотите отменить заказ?</string>
+    <string name="no" translatable="false">Нет</string>
+    <string name="yes" translatable="false">Да</string>
+    <string name="thank_you" translatable="false">Спасибо</string>
+    <string name="ord_am" translatable="false">Итого</string>
+    <string name="pay_m" translatable="false">Способ оплаты</string>
+    <string name="id" translatable="false">Номер</string>
+    <string name="payment" translatable="false">Оплата</string>
+    <string name="password_too_short" translatable="false">Пароль слишком короткий</string>
+    <string name="invalide_email_address" translatable="false">Неверный адрес электронной почты</string>
+    <string name="no_internet" translatable="false">Извините! Не подключен к интернету</string>
+    <string name="order_no" translatable="false">Номер заказа:\u0020</string>
+    <string name="pending" translatable="false">В ожидании</string>
+    <string name="confirm" translatable="false">Подтвердить</string>
+    <string name="delivered" translatable="false">Доставлен</string>
+    <string name="outfordeliverd" translatable="false">Готов к отправке \n Готов к вывозу</string>
+    <string name="cancle" translatable="false">Отмена</string>
+    <string name="date_d" translatable="false">Дата:</string>
+    <string name="time_t" translatable="false">Время:</string>
+    <string name="search_msg" translatable="false">Поиск по ключевому слову</string>
+    <string name="change_password" translatable="false">Изменить пароль</string>
+    <string name="old_password" translatable="false">Старый пароль (обязательно)</string>
+    <string name="new_password" translatable="false">Новый пароль (обязательно)</string>
+    <string name="confirm_password" translatable="false">Подтвердите пароль (обязательно)</string>
+    <string name="password_not_same" translatable="false">Подтвердите пароль и новый пароль не совпадают.</string>
+    <string name="delivery_charge" translatable="false">Расходы за доставку:\u0020</string>
+    <string name="amount" translatable="false">Кол-во:\u0020</string>
+    <string name="search_here" translatable="false">Искать здесь...</string>
+    <string name="total_amount" translatable="false">Итого:\u0020</string>
+    <string name="search" translatable="false">Поиск</string>
+    <string name="enter_keyword" translatable="false">Пожалуйста, введите ключевое слово</string>
+    <string name="delete" translatable="false">Удалить</string>
+    <string name="edit" translatable="false">Редактировать</string>
+    <string name="description" translatable="false">Описание:</string>
+<string name="assign" translatable="false">Подтвердить</string>
+    <string name="cust_name" translatable="false">Имя клиента</string>
+    <string name="back" translatable="false">Назад</string>
+    <string name="order_id" translatable="false">Номер заказа</string>
+    <string name="continue_btn" translatable="false">Продолжить</string>
+    <string name="btn_snd" translatable="false">Отправить</string>
+    <string name="cust_ph" translatable="false">Телефон клиента</string>
+    <string name="today_order" translatable="false">Заказы на сегодня</string>
+    <string name="next_order" translatable="false">Заказ на следующий день</string>
+    <!-- row_delivery_time.xml -->
+    <string name="tv_deli_socity" translatable="false">Район:</string>
+    <string name="tv_deli_mobile" translatable="false">Номер телефона:</string>
+    <string name="tv_deli_pin" translatable="false">ИНДЕКС:</string>
+
+    <!-- delivery_payment_detail_fragment.java -->
+    <string name="tv_deli_pay_ontime" translatable="false">В срок :\u0020</string>
+    <string name="tv_deli_pay_address" translatable="false">Адрес:\u0020</string>
+
+    <!-- delivery_get_address_adapter.java
+    <string name="reciver_name">Имя получателя:\u0020</string>
+    <string name="reciver_mobile">Телефон получателя:\u0020</string>
+    <string name="pincode">ИНДЕКС:\u0020</string>
+    <string name="house_no">Номер дома:\u0020</string>
+    <string name="socity">Район:\u0020</string>-->
+
+    <string name="reciver_name" translatable="false">ФИО получателя:\u0020</string>
+    <string name="reciver_mobile" translatable="false">Номер получателя:\u0020</string>
+    <string name="pincode" translatable="false">ИНДЕКС:\u0020</string>
+    <string name="house_no" translatable="false">Номер дома:\u0020</string>
+    <string name="socity" translatable="false">Район:\u0020</string>
+
+    <string name="link" translatable="false">Разработан <font color='green'>B-TRADE</font></string>
+
+</resources>

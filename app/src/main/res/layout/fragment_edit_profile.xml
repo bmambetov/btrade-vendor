@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_10">
+
+            <ImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/iv_pro_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_10"
+                android:src="@drawable/icons" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_filter"
+                android:orientation="vertical">
+
+
+                <com.btradesm.storemanager.Fonts.LatoBLack
+                    android:id="@+id/tv_pro_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_4"
+                    android:gravity="center"
+                    android:text="@string/tv_reg_name_hint"
+                    android:textColor="#000"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_pro_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="@dimen/space_5"
+                    android:layout_marginLeft="@dimen/space_12"
+                    android:layout_marginRight="@dimen/space_12"
+                    android:layout_marginTop="@dimen/space_4"
+                    android:background="@drawable/xml_textbox_bg"
+                    android:ems="10"
+                    android:gravity="center_horizontal"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <com.btradesm.storemanager.Fonts.LatoBLack
+                    android:id="@+id/tv_pro_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_4"
+                    android:gravity="center"
+                    android:text="@string/et_login_phone_hint"
+                    android:textColor="#000"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_pro_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="@dimen/space_5"
+                    android:layout_marginLeft="@dimen/space_12"
+                    android:layout_marginRight="@dimen/space_12"
+                    android:layout_marginTop="@dimen/space_4"
+                    android:background="@drawable/xml_textbox_bg"
+                    android:ems="10"
+                    android:gravity="center_horizontal"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:textSize="14sp" />
+
+                <com.btradesm.storemanager.Fonts.LatoBLack
+                    android:id="@+id/tv_pro_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_4"
+                    android:gravity="center"
+                    android:text="@string/tv_login_email"
+                    android:textColor="#000"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_pro_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="@dimen/space_5"
+                    android:layout_marginLeft="@dimen/space_12"
+                    android:layout_marginRight="@dimen/space_12"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:background="@drawable/xml_textbox_bg"
+                    android:ems="10"
+                    android:gravity="center_horizontal"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!--<TextView
+                            android:id="@+id/tv_pro_socity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tv_reg_socity"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/btn_pro_socity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/xml_textbox_bg"
+                            android:drawableEnd="@drawable/arrow_right"
+                            android:drawableRight="@drawable/arrow_right"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/btn_reg_socity_choose"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/tv_pro_home"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tv_reg_house"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/et_pro_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/space_5"
+                            android:background="@drawable/xml_textbox_bg"
+                            android:inputType="text" />-->
+
+            <RelativeLayout
+                android:id="@+id/btn_pro_edit"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/bg_rounded_button"
+                android:padding="12dp">
+
+                <com.btradesm.storemanager.Fonts.LatoBLack
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/continue_btn"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_small" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

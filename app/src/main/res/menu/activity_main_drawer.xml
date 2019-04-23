@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group>
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_nav_home"
+            android:title="@string/nav_dashboard" />
+        <item
+            android:id="@+id/nav_app_user"
+            android:icon="@drawable/ic_action_user"
+            android:title="@string/nav_app_user" />
+        <item
+            android:id="@+id/nav_edit_profile"
+            android:icon="@drawable/ic_nav_profile"
+            android:title="@string/edit_profile" />
+
+        <item
+            android:id="@+id/nav_product_list"
+            android:icon="@drawable/ic_action_nav_product_list"
+            android:title="@string/nav_Products" />
+        <item
+            android:id="@+id/nav_stock_update"
+            android:icon="@drawable/ic_action_nav_stock_update"
+            android:title="@string/nav_stock_update" />
+
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/ic_nav_order"
+            android:title="@string/nav_order" />
+
+        <item
+            android:id="@+id/nav_stock"
+            android:icon="@drawable/ic_action_nav_stock"
+            android:title="@string/nav_stock" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_exit"
+            android:title="@string/nav_logout" />
+
+        <item
+            android:id="@+id/nav_powerd"
+            android:icon="@drawable/copy"
+            android:title="@string/link" />
+
+    </group>
+</menu>
