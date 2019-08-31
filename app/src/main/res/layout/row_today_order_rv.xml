@@ -20,24 +20,25 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/space_10"
             android:layout_marginLeft="@dimen/space_10"
-            android:layout_marginRight="@dimen/space_10"
             android:layout_marginTop="@dimen/space_2"
+            android:layout_marginRight="@dimen/space_10"
+            android:layout_marginBottom="@dimen/space_10"
             android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <com.btradesm.storemanager.Fonts.LatoBLack
                     android:id="@+id/assign_to"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/space_4"
-                    android:text=""
                     android:gravity="end"
+                    android:text=""
                     android:textColor="@color/green"
                     android:textSize="@dimen/text_size_X_small" />
 
@@ -252,10 +253,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginBottom="@dimen/space_4"
                     android:layout_marginLeft="@dimen/space_10"
-                    android:layout_marginRight="@dimen/space_10"
                     android:layout_marginTop="@dimen/space_4"
+                    android:layout_marginRight="@dimen/space_10"
+                    android:layout_marginBottom="@dimen/space_4"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -294,10 +295,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginBottom="@dimen/space_4"
                     android:layout_marginLeft="@dimen/space_10"
-                    android:layout_marginRight="@dimen/space_10"
                     android:layout_marginTop="@dimen/space_4"
+                    android:layout_marginRight="@dimen/space_10"
+                    android:layout_marginBottom="@dimen/space_4"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -322,27 +323,26 @@
                 </LinearLayout>
 
 
-
-
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
+            android:id="@+id/assign_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/assign_layout"
-            android:visibility="gone"
             android:orientation="horizontal">
 
             <RelativeLayout
                 android:id="@+id/assign_order_to"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/space_10"
                 android:layout_marginLeft="@dimen/space_4"
-                android:layout_marginRight="@dimen/space_4"
                 android:layout_marginTop="@dimen/space_10"
+                android:layout_marginRight="@dimen/space_4"
+                android:layout_marginBottom="@dimen/space_10"
                 android:background="@drawable/xml_textbox_bg"
-                android:padding="12dp">
+                android:padding="12dp"
+                android:visibility="invisible">
 
                 <com.btradesm.storemanager.Fonts.LatoBLack
                     android:id="@+id/order_assign_list"
@@ -361,10 +361,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_marginBottom="@dimen/space_10"
                 android:layout_marginLeft="@dimen/space_12"
-                android:layout_marginRight="@dimen/space_12"
                 android:layout_marginTop="@dimen/space_10"
+                android:layout_marginRight="@dimen/space_12"
+                android:layout_marginBottom="@dimen/space_10"
                 android:background="@drawable/bg_rounded_button"
                 android:padding="12dp">
 
@@ -381,8 +381,6 @@
 
 
         </LinearLayout>
-
-
 
 
     </LinearLayout>

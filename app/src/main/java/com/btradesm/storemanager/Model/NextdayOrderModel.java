@@ -8,6 +8,7 @@ public class NextdayOrderModel {
     public String delivery_time_from;
     public String delivery_time_to;
     public String status;
+    public int user_status;
     public String note;
     public String is_paid;
     public String total_amount;
@@ -237,4 +238,11 @@ public class NextdayOrderModel {
         this.payment_method = payment_method;
     }
 
+    public int getUser_status() {
+        return user_status;
+    }
+
+    public void setUser_status(int user_status) {
+        this.user_status = user_status;
+    }
 }

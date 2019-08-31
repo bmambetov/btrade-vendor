@@ -43,13 +43,14 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="50dp"
+                android:visibility="gone">
 
                 <com.btradesm.storemanager.Fonts.LatoBLack
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/space_12"
                     android:layout_alignParentStart="true"
+                    android:layout_marginLeft="@dimen/space_12"
                     android:gravity="center_vertical"
                     android:text="@string/assign_ord_de"
                     android:textColor="@color/green"
@@ -71,21 +72,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginTop="@dimen/space_8"
-                android:background="@color/gray" />
+                android:background="@color/gray"
+                android:visibility="gone" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/space_10"
                 android:layout_marginLeft="@dimen/space_10"
-                android:layout_marginRight="@dimen/space_10"
                 android:layout_marginTop="@dimen/space_10"
+                android:layout_marginRight="@dimen/space_10"
+                android:layout_marginBottom="@dimen/space_10"
                 android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
                     <com.btradesm.storemanager.Fonts.LatoBLack
                         android:layout_width="wrap_content"
@@ -99,8 +102,8 @@
                         android:id="@+id/status"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="@dimen/space_12"
                         android:layout_marginTop="@dimen/space_4"
+                        android:layout_marginRight="@dimen/space_12"
                         android:gravity="right"
                         android:text="@string/st"
                         android:textColor="@color/green"
@@ -300,10 +303,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginBottom="@dimen/space_10"
                 android:layout_marginLeft="@dimen/space_10"
-                android:layout_marginRight="@dimen/space_10"
                 android:layout_marginTop="@dimen/space_10"
+                android:layout_marginRight="@dimen/space_10"
+                android:layout_marginBottom="@dimen/space_10"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -342,7 +345,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </LinearLayout>
-
 
 
         </LinearLayout>

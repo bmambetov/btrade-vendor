@@ -7,6 +7,8 @@ public class TodayOrderModel {
     public String delivery_time_from;
     public String delivery_time_to;
     public String status;
+    public String item_status;
+    public int user_status;
     public String note;
     public String is_paid;
     public String total_amount;
@@ -75,6 +77,14 @@ public class TodayOrderModel {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getItem_status() {
+        return item_status;
+    }
+
+    public void setItem_status(String item_status) {
+        this.item_status = item_status;
     }
 
     public String getNote() {
@@ -239,6 +249,11 @@ public class TodayOrderModel {
         this.payment_method = payment_method;
     }
 
+    public int getUser_status() {
+        return user_status;
+    }
 
-
+    public void setUser_status(int user_status) {
+        this.user_status = user_status;
+    }
 }

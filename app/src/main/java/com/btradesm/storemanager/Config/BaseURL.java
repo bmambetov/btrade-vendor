@@ -24,9 +24,9 @@ public class BaseURL {
     public static final String KEY_DELIVERY_BOY_NAME = "BOY_NAME";
     public static final String KEY_ORDER_ID = "ORDER_ID";
 
-    public static String BASE_URL = "http://nextinnovation.pro/store/";
+    public static String BASE_URL = "http://btrade312.ru/store/";
 
-    public static String BASE_URLGOGrocer = "http://nextinnovation.pro/";
+    public static String BASE_URLGOGrocer = "http://btrade312.ru/";
     public static String IMG_PROFILE_URL = BASE_URL + "uploads/profile/";
     public static String LOGIN_URL = BASE_URL + "index.php/api/login";
     public static String DELIVERY_BOY = BASE_URLGOGrocer + "index.php/api/delivery_boy";

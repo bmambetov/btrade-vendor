@@ -57,7 +57,7 @@ public class My_Nextday_Order_Adapter extends RecyclerView.Adapter<My_Nextday_Or
 
     private List<NextdayOrderModel> modelList;
     private LayoutInflater inflater;
-    String select="false";
+    String select = "false";
     private Fragment currentFragment;
     private Context context;
     SharedPreferences preferences;
@@ -110,56 +110,60 @@ public class My_Nextday_Order_Adapter extends RecyclerView.Adapter<My_Nextday_Or
             Assign_Order_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (select.contains("true")) {
-
-                        int pos = getAdapterPosition();
-                        final String id = modelList.get(pos).getSale_id();
-                        final String getname = SharedPref.getString(context, BaseURL.KEY_DELIVERY_BOY_NAME);
-                        if (NetworkConnection.connectionChecking(context)) {
-                            RequestQueue rq = Volley.newRequestQueue(context);
-                            StringRequest postReq = new StringRequest(Request.Method.POST, BaseURL.ASSIGN_ORDER,
-                                    new Response.Listener<String>() {
-                                        @Override
-                                        public void onResponse(String response) {
-                                            Log.i("eclipse", "Response=" + response);
-                                            try {
-                                                JSONObject object = new JSONObject(response);
-                                                JSONArray Jarray = object.getJSONArray("assign");
-                                                for (int i = 0; i < Jarray.length(); i++) {
-                                                    JSONObject json_data = Jarray.getJSONObject(i);
-                                                    String msg = json_data.getString("msg");
-                                                    Toast.makeText(context, "" + msg, Toast.LENGTH_SHORT).show();
-                                                    Intent intent = new Intent(context, AssignSuccess.class);
-                                                    context.startActivity(intent);
-                                                }
-                                            } catch (JSONException e) {
-                                                e.printStackTrace();
+                    Assign_Order_button.setEnabled(false);
+                    int pos = getAdapterPosition();
+                    final String id = modelList.get(pos).getSale_id();
+                    final String currentUserId = context.getSharedPreferences("logindata", MODE_PRIVATE).getString("id", "0");
+                    if (NetworkConnection.connectionChecking(context)) {
+                        RequestQueue rq = Volley.newRequestQueue(context);
+                        StringRequest postReq = new StringRequest(Request.Method.POST, BaseURL.ASSIGN_ORDER,
+                                new Response.Listener<String>() {
+                                    @Override
+                                    public void onResponse(String response) {
+                                        Log.i("eclipse", "Response=" + response);
+                                        try {
+                                            JSONObject object = new JSONObject(response);
+                                            JSONArray Jarray = object.getJSONArray("assign");
+                                            for (int i = 0; i < Jarray.length(); i++) {
+                                                JSONObject json_data = Jarray.getJSONObject(i);
+                                                String msg = json_data.getString("msg");
+                                                Toast.makeText(context, "" + msg, Toast.LENGTH_SHORT).show();
+                                                Intent intent = new Intent(context, AssignSuccess.class);
+                                                context.startActivity(intent);
                                             }
+                                        } catch (JSONException e) {
+                                            e.printStackTrace();
                                         }
-                                    }, new Response.ErrorListener() {
+                                        assign_layout.setVisibility(View.GONE);
+                                    }
+                                }, new Response.ErrorListener() {
 
-                                @Override
-                                public void onErrorResponse(VolleyError error) {
-                                    System.out.println("Error [" + error + "]");
-                                }
-                            }) {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                System.out.println("Error [" + error + "]");
+                            }
+                        }) {
 
-                                @Override
-                                protected Map<String, String> getParams() throws AuthFailureError {
-                                    Map<String, String> params = new HashMap<String, String>();
-                                    params.put("order_id", id);
-                                    params.put("boy_name", getname);
-                                    return params;
-                                }
-                            };
-                            rq.add(postReq);
-                        } else {
-                            Intent intent = new Intent(context, NetworkError.class);
-                            context.startActivity(intent);
-                        }
-                    }else {
-                        Toast.makeText(context, "Please Select Delivery Boy", Toast.LENGTH_SHORT).show();
+                            @Override
+                            protected Map<String, String> getParams() throws AuthFailureError {
+                                Map<String, String> params = new HashMap<String, String>();
+                                params.put("order_id", id);
+                                Log.e("TAG", "order_id: " + id);
+                                Log.e("TAG", "userId: " + currentUserId);
+                                params.put("user_id", currentUserId);
+                                return params;
+                            }
+                        };
+                        rq.add(postReq);
+                    } else {
+                        Intent intent = new Intent(context, NetworkError.class);
+                        context.startActivity(intent);
                     }
+//                    if (select.contains("true")) {
+//
+//                    }else {
+//                        Toast.makeText(context, "Please Select Delivery Boy", Toast.LENGTH_SHORT).show();
+//                    }
                 }
 
             });
@@ -206,7 +210,7 @@ public class My_Nextday_Order_Adapter extends RecyclerView.Adapter<My_Nextday_Or
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                    select="true";
+                    select = "true";
                     SelectBoy = (String) adapterView.getItemAtPosition(position);
                     Assign_Boy_name.setText(StringUtils.capitalize(Boy_List.get(position).toLowerCase().trim()));
                     SelectBoy = Assign_Boy_name.getText().toString();
@@ -277,28 +281,27 @@ public class My_Nextday_Order_Adapter extends RecyclerView.Adapter<My_Nextday_Or
     @Override
     public void onBindViewHolder(My_Nextday_Order_Adapter.MyViewHolder holder, int position) {
         NextdayOrderModel mList = modelList.get(position);
-        holder.tv_ammount.setText( mList.getTotal_amount()+context.getResources().getString(R.string.currency));
-        if (mList.getPayment_method().equals("Store Pick Up")) {
+        holder.tv_ammount.setText(mList.getTotal_amount() + context.getResources().getString(R.string.currency));
+//        if (mList.getPayment_method().equals("Store Pick Up")) {
+//            holder.assign_layout.setVisibility(View.GONE);
+//            holder.payment_mode.setText(mList.getPayment_method());
+//        } else if (mList.getPayment_method() != "Store Pick Up") {
+//            holder.payment_mode.setText(mList.getPayment_method());
+//            holder.assign_layout.setVisibility(View.VISIBLE);
+//        }
+//        if (mList.getStatus().equals("0")) {
+//            holder.tv_status.setText(context.getResources().getString(R.string.pending));
+//        } else if (mList.getStatus().equals("1")) {
+//            holder.tv_status.setText(context.getResources().getString(R.string.confirm));
+//        } else if (mList.getStatus().equals("2")) {
+//            holder.tv_status.setText(context.getResources().getString(R.string.outfordeliverd));
+//        } else if (mList.getStatus().equals("3")) {
+//            holder.tv_status.setText(context.getResources().getString(R.string.delivered));
+//        }
+        if (mList.getUser_status() == 1) {
             holder.assign_layout.setVisibility(View.GONE);
-            holder.payment_mode.setText(mList.getPayment_method());
-        } else if (mList.getPayment_method() != "Store Pick Up") {
-            holder.payment_mode.setText(mList.getPayment_method());
+        } else {
             holder.assign_layout.setVisibility(View.VISIBLE);
-        }
-        if (mList.getStatus().equals("0")) {
-            holder.tv_status.setText(context.getResources().getString(R.string.pending));
-        } else if (mList.getStatus().equals("1")) {
-            holder.tv_status.setText(context.getResources().getString(R.string.confirm));
-        } else if (mList.getStatus().equals("2")) {
-            holder.tv_status.setText(context.getResources().getString(R.string.outfordeliverd));
-        } else if (mList.getStatus().equals("3")) {
-            holder.tv_status.setText(context.getResources().getString(R.string.delivered));
-        }
-        if (mList.getAssign_to().equals("0")) {
-            holder.assign_layout.setVisibility(View.VISIBLE);
-        } else if (mList.getAssign_to() != "0") {
-            holder.tv_assign_to.setText(context.getResources().getString(R.string.assign_to) + mList.getAssign_to());
-            holder.assign_layout.setVisibility(View.GONE);
         }
 
 
@@ -308,24 +311,23 @@ public class My_Nextday_Order_Adapter extends RecyclerView.Adapter<My_Nextday_Or
         holder.tv_customer_phone.setText(mList.getUser_phone());
         holder.tv_order_date.setText(mList.getOn_date());
         preferences = context.getSharedPreferences("lan", MODE_PRIVATE);
-        String language=preferences.getString("language","");
+        String language = preferences.getString("language", "");
         if (language.contains("spanish")) {
-            String timefrom=mList.getDelivery_time_from();
-            String timeto=mList.getDelivery_time_to();
+            String timefrom = mList.getDelivery_time_from();
+            String timeto = mList.getDelivery_time_to();
 
-            timefrom=timefrom.replace("pm","م");
-            timefrom=timefrom.replace("am","ص");
+            timefrom = timefrom.replace("pm", "م");
+            timefrom = timefrom.replace("am", "ص");
 
-            timeto=timeto.replace("pm","م");
-            timeto=timeto.replace("am","ص");
-
+            timeto = timeto.replace("pm", "م");
+            timeto = timeto.replace("am", "ص");
 
 
             holder.tv_order_time.setText(timefrom + "-" + timeto);
-        }else {
+        } else {
 
-            String timefrom=mList.getDelivery_time_from();
-            String timeto=mList.getDelivery_time_to();
+            String timefrom = mList.getDelivery_time_from();
+            String timeto = mList.getDelivery_time_to();
 
 
             holder.tv_order_time.setText(timefrom + "-" + timeto);

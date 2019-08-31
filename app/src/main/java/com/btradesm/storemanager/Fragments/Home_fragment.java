@@ -80,7 +80,7 @@ public class Home_fragment extends Fragment {
                         @Override
                         public void onResponse(String response) {
                             final List<TodayOrderModel> data = new ArrayList<>();
-                            Log.i("eclipse", "Response=" + response);
+                            Log.e("eclipse", "Response=" + response);
                             // We set the response data in the TextView
                             try {
                                 JSONObject object = new JSONObject(response.toString());
@@ -116,6 +116,7 @@ public class Home_fragment extends Fragment {
                                     brandModel.socity_name = json_data.getString("socity_name");
                                     brandModel.receiver_name = json_data.getString("receiver_name");
                                     brandModel.receiver_mobile = json_data.getString("receiver_mobile");
+                                    brandModel.user_status = json_data.getInt("user_status");
                                     data.add(brandModel);
                                 }
                                 my_today_order_adapter = new My_Today_Order_Adapter(getActivity(), data);
@@ -181,6 +182,7 @@ public class Home_fragment extends Fragment {
                                     brandModel.socity_name = json_data.getString("socity_name");
                                     brandModel.receiver_name = json_data.getString("receiver_name");
                                     brandModel.receiver_mobile = json_data.getString("receiver_mobile");
+                                    brandModel.user_status = json_data.getInt("user_status");
                                     data.add(brandModel);
                                 }
                                 my_nextday_order_adapter = new My_Nextday_Order_Adapter(getActivity(), data);
